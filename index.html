@@ -1,13 +1,221 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>abanic</title>
+    <meta name="description" content="Abanic: Servicios de limpieza profesional para empresas y hogares en Santiago. Expertos en aseo de oficinas, edificios y sanitización. Cotice ahora." />
+    <title>Abanic | Limpieza Profesional de Oficinas y Hogares</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Abanic",
+      "image": "https://www.abanic.cl/logo.png",
+      "telephone": "+56 9 1234 5678",
+      "email": "contacto@abanic.cl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Providencia 1234",
+        "addressLocality": "Santiago",
+        "addressRegion": "RM",
+        "addressCountry": "CL"
+      },
+      "url": "https://www.abanic.cl",
+      "priceRange": "$$"
+    }
+    </script>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Header -->
+    <header class="glass-panel" style="position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 0;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo" style="font-weight: 700; font-size: 1.5rem; color: var(--primary-color);">ABANIC</div>
+        <nav>
+          <ul style="display: flex; gap: 2rem;">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto" class="btn btn-accent">Cotizar Ahora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="section" style="padding-top: 10rem; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); min-height: 80vh; display: flex; align-items: center;">
+      <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="hero-content animate-fade-in">
+          <h1 style="margin-bottom: 1.5rem;">Expertos en Limpieza <span class="text-secondary">Profesional</span></h1>
+          <p style="font-size: 1.25rem; margin-bottom: 2rem;">
+            Transformamos sus espacios en ambientes impecables y seguros. Servicio de aseo para empresas y hogares con estándares de calidad 2025.
+          </p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="#contacto" class="btn btn-primary">Solicitar Presupuesto</a>
+            <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+          </div>
+          <div style="margin-top: 3rem; display: flex; gap: 2rem; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="color: var(--secondary-color); font-size: 1.5rem;">★</span>
+              <span style="font-weight: 600;">+500 Clientes Felices</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="color: var(--primary-color); font-size: 1.5rem;">✓</span>
+              <span style="font-weight: 600;">Personal Certificado</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image animate-fade-in" style="animation-delay: 0.2s;">
+          <!-- Placeholder for Hero Image -->
+          <div style="background-color: #ddd; width: 100%; height: 400px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: #666;">
+            Imagen Hero (Oficina Limpia)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof / Logos -->
+    <section class="section" style="background-color: var(--bg-white); padding: 2rem 0;">
+      <div class="container text-center">
+        <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px;">Empresas que confían en nosotros</p>
+        <div style="display: flex; justify-content: center; gap: 4rem; opacity: 0.6; flex-wrap: wrap;">
+          <!-- Placeholders for Logos -->
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 1</div>
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 2</div>
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 3</div>
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 4</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 4rem;">
+          <h2 style="margin-bottom: 1rem;">Nuestros Servicios</h2>
+          <p style="max-width: 600px; margin: 0 auto;">Soluciones integrales de limpieza adaptadas a sus necesidades específicas.</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <!-- Service 1: Oficinas -->
+          <div class="card">
+            <div style="height: 200px; background-color: #eee; border-radius: var(--radius-md); margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">Imagen Oficina</div>
+            <h3>Limpieza de Oficinas</h3>
+            <p>Mantención diaria o periódica para espacios de trabajo productivos. Aseo de pisos, escritorios, baños y áreas comunes.</p>
+            <ul style="margin-bottom: 1.5rem; color: var(--text-light);">
+              <li>✓ Personal de confianza</li>
+              <li>✓ Horarios flexibles</li>
+              <li>✓ Insumos incluidos</li>
+            </ul>
+            <a href="/limpieza-oficinas.html" class="btn btn-primary" style="width: 100%; text-align: center;">Ver Detalles</a>
+          </div>
+
+          <!-- Service 2: Hogar -->
+          <div class="card">
+            <div style="height: 200px; background-color: #eee; border-radius: var(--radius-md); margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">Imagen Hogar</div>
+            <h3>Limpieza de Hogar</h3>
+            <p>Servicio profundo y detallista para casas y departamentos. Deje la limpieza en manos de expertos y disfrute su tiempo.</p>
+            <ul style="margin-bottom: 1.5rem; color: var(--text-light);">
+              <li>✓ Aseo profundo</li>
+              <li>✓ Vidrios y alfombras</li>
+              <li>✓ Seguridad garantizada</li>
+            </ul>
+            <a href="/limpieza-hogar.html" class="btn btn-primary" style="width: 100%; text-align: center;">Ver Detalles</a>
+          </div>
+
+          <!-- Service 3: Sanitización -->
+          <div class="card">
+            <div style="height: 200px; background-color: #eee; border-radius: var(--radius-md); margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">Imagen Sanitización</div>
+            <h3>Sanitización</h3>
+            <p>Eliminación de virus y bacterias con tecnología certificada. Proteja la salud de sus colaboradores y familia.</p>
+            <ul style="margin-bottom: 1.5rem; color: var(--text-light);">
+              <li>✓ Amonio Cuaternario</li>
+              <li>✓ Certificado de servicio</li>
+              <li>✓ Rápida aplicación</li>
+            </ul>
+            <a href="/sanitizacion.html" class="btn btn-primary" style="width: 100%; text-align: center;">Ver Detalles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="nosotros" class="section" style="background-color: var(--primary-color); color: var(--text-white);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div>
+            <h2 style="color: var(--text-white); margin-bottom: 1.5rem;">¿Por qué elegir Abanic?</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+              Nos diferenciamos por nuestro compromiso con la calidad y la satisfacción del cliente. Utilizamos tecnología de punta y procesos estandarizados.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+              <div>
+                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Experiencia</h4>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Más de 10 años en el rubro de limpieza.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Garantía</h4>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Si no queda satisfecho, rectificamos el servicio.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Ecología</h4>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Productos amigables con el medio ambiente.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Seguridad</h4>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Personal filtrado y asegurado.</p>
+              </div>
+            </div>
+          </div>
+          <div style="background-color: rgba(255,255,255,0.1); padding: 2rem; border-radius: var(--radius-lg); backdrop-filter: blur(5px);">
+            <h3 style="color: var(--text-white); margin-bottom: 1.5rem; text-align: center;">Solicite su Cotización</h3>
+            <form id="contact-form" style="display: flex; flex-direction: column; gap: 1rem;">
+              <input type="text" placeholder="Nombre" style="padding: 1rem; border-radius: var(--radius-md); border: none;">
+              <input type="email" placeholder="Email" style="padding: 1rem; border-radius: var(--radius-md); border: none;">
+              <input type="tel" placeholder="Teléfono" style="padding: 1rem; border-radius: var(--radius-md); border: none;">
+              <select style="padding: 1rem; border-radius: var(--radius-md); border: none;">
+                <option value="">Seleccione Servicio</option>
+                <option value="oficina">Limpieza de Oficinas</option>
+                <option value="hogar">Limpieza de Hogar</option>
+                <option value="sanitizacion">Sanitización</option>
+              </select>
+              <button type="submit" class="btn btn-accent" style="margin-top: 1rem; width: 100%;">Enviar Solicitud</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #1a1a1a; color: #888; padding: 4rem 0 2rem;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+          <div>
+            <div style="color: var(--text-white); font-weight: 700; font-size: 1.5rem; margin-bottom: 1rem;">ABANIC</div>
+            <p>Servicios de limpieza profesional en Santiago de Chile.</p>
+          </div>
+          <div>
+            <h4 style="color: var(--text-white); margin-bottom: 1rem;">Servicios</h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><a href="/limpieza-oficinas.html">Limpieza de Oficinas</a></li>
+              <li><a href="/limpieza-hogar.html">Limpieza de Hogar</a></li>
+              <li><a href="/sanitizacion.html">Sanitización</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color: var(--text-white); margin-bottom: 1rem;">Contacto</h4>
+            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <li>contacto@abanic.cl</li>
+              <li>+56 9 1234 5678</li>
+              <li>Santiago, Chile</li>
+            </ul>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #333; padding-top: 2rem; text-align: center; font-size: 0.9rem;">
+          &copy; 2025 Abanic. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
