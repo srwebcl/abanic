@@ -1,5 +1,5 @@
 export function renderHeader() {
-    const headerHTML = `
+  const headerHTML = `
     <header class="glass-panel" style="position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.5rem 0; transition: all 0.3s ease;">
       <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
         <div class="logo">
@@ -24,7 +24,7 @@ export function renderHeader() {
               </ul>
             </li>
             <li><a href="/#nosotros" class="nav-link">Nosotros</a></li>
-            <li><a href="#contacto" class="btn btn-accent">Cotizar Ahora</a></li>
+            <li><a href="#contacto" class="btn btn-green">Cotizar Ahora</a></li>
           </ul>
         </nav>
 
@@ -52,34 +52,34 @@ export function renderHeader() {
             </ul>
           </li>
           <li><a href="/#nosotros" class="nav-link">Nosotros</a></li>
-          <li><a href="#contacto" class="btn btn-accent" style="width: 100%; text-align: center;">Cotizar Ahora</a></li>
+          <li><a href="#contacto" class="btn btn-green" style="width: 100%; text-align: center;">Cotizar Ahora</a></li>
         </ul>
       </div>
     </header>
   `;
 
-    document.body.insertAdjacentHTML('afterbegin', headerHTML);
+  document.body.insertAdjacentHTML('afterbegin', headerHTML);
 
-    // Mobile Menu Logic
-    const btn = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('.mobile-nav');
+  // Mobile Menu Logic
+  const btn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('.mobile-nav');
 
-    if (btn && nav) {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            nav.classList.toggle('active');
-        });
-    }
-
-    // Sticky Header Logic
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.8)';
-            header.style.boxShadow = 'none';
-        }
+  if (btn && nav) {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      nav.classList.toggle('active');
     });
+  }
+
+  // Sticky Header Logic
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.style.background = 'rgba(255, 255, 255, 0.95)';
+      header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    } else {
+      header.style.background = 'rgba(255, 255, 255, 0.8)';
+      header.style.boxShadow = 'none';
+    }
+  });
 }

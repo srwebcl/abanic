@@ -1,6 +1,6 @@
 export function renderFooter() {
-    const footerHTML = `
-    <footer style="background-color: #1a1a1a; color: #888; padding: 4rem 0 2rem; margin-top: auto;">
+  const footerHTML = `
+    <footer style="background-color: var(--secondary-color); color: white; padding: 4rem 0 2rem; margin-top: auto;">
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
           
@@ -58,5 +58,5 @@ export function renderFooter() {
     </footer>
   `;
 
-    document.body.insertAdjacentHTML('beforeend', footerHTML);
+  document.body.insertAdjacentHTML('beforeend', footerHTML);
 }

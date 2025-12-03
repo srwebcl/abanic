@@ -34,38 +34,40 @@
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       
-      <div class="container" style="position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-        <div class="hero-content animate-fade-in">
-          <h1 style="margin-bottom: 1.5rem; font-size: 3.5rem; line-height: 1.1;">
-            Servicio Integral de <span class="text-primary">Aseo y Limpieza</span>
-          </h1>
-          <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #444;">
-            Transformamos sus espacios en ambientes impecables y seguros. Calidad certificada en Santiago y Regiones.
-          </p>
-          <div style="display: flex; gap: 1rem;">
-              <span style="font-weight: 600;">Personal Certificado</span>
+      <div class="container" style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center;">
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; width: 100%;">
+          
+          <!-- Hero Content (Left) -->
+          <div class="hero-content animate-slide-up">
+            <h1 style="margin-bottom: 1.5rem; font-size: 3.5rem; line-height: 1.1; color: var(--text-main);">
+              Servicio Integral de <br>
+              <span class="text-gradient">Aseo y Limpieza</span>
+            </h1>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #444; max-width: 90%;">
+              Transformamos sus espacios en ambientes impecables y seguros. Calidad certificada en <span style="font-weight: 700; color: var(--primary-color);">Santiago y Regiones</span>.
+            </p>
+            
+            <div style="display: flex; gap: 2rem; align-items: center; margin-top: 2rem;">
+               <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="color: var(--secondary-color); font-size: 1.5rem;">★</span>
+                  <span style="font-weight: 600;">+30 Años de Experiencia</span>
+               </div>
+               <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <span style="color: var(--primary-color); font-size: 1.5rem;">✓</span>
+                  <span style="font-weight: 600;">Personal Certificado</span>
+               </div>
             </div>
           </div>
-        </div>
-        <div class="hero-image animate-fade-in" style="animation-delay: 0.2s;">
-          <img src="/hero_office_cleaning.png" alt="Limpieza Profesional de Oficinas" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); width: 100%; height: 400px; object-fit: cover;">
+          
+          <!-- Hero Form (Right) -->
+          <div id="hero-form-container" class="animate-fade-in" style="animation-delay: 0.3s;">
+            <!-- Form injected by Form.js -->
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Social Proof / Logos -->
-    <section class="section" style="background-color: var(--bg-white); padding: 2rem 0;">
-      <div class="container text-center">
-        <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px;">Empresas que confían en nosotros</p>
-        <div style="display: flex; justify-content: center; gap: 4rem; opacity: 0.6; flex-wrap: wrap;">
-          <!-- Placeholders for Logos -->
-          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 1</div>
-          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 2</div>
-          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 3</div>
-          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 4</div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Services Section (Carousel) -->
     <section id="servicios" class="section" style="background-color: #f9f9f9;">
@@ -168,26 +170,47 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section (Google Reviews Style) -->
     <section class="section" style="background-color: #f9f9f9;">
       <div class="container">
         <div class="text-center" style="margin-bottom: 3rem;">
-          <h2>Clientes Felices</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-          <div class="card">
-            <p style="font-style: italic; margin-bottom: 1rem;">
-              “Abanic entrega un servicio excelente, la oficina está resplandeciente, con un aroma maravilloso, los clientes preguntan constantemente porque se nota el buen trabajo, es una empresa responsable, que superó nuestras expectativas, con muy buen trato”
-            </p>
-            <p style="font-weight: 700; color: var(--primary-color);">Paola Daire</p>
-            <p style="font-size: 0.9rem;">Ejecutiva Empresas Banco Internacional</p>
+          <h2 style="margin-bottom: 0.5rem;">Lo que dicen nuestros clientes</h2>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: #fbbc04;">
+             <span style="font-size: 1.2rem;">★★★★★</span>
+             <span style="color: #666; font-size: 0.9rem;">4.9/5 en Google Reviews</span>
           </div>
-          <div class="card">
-            <p style="font-style: italic; margin-bottom: 1rem;">
-              “Lo que más me gusta de Abanic es la seriedad y supervisión que entregan día a día, el resultado que obtuve después de contratar el servicio de mantención de limpieza fue satisfactorio, además que todos los problemas se solucionaron rápidamente...”
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <!-- Review 1 -->
+          <div class="card" style="border-left: 4px solid #4285F4;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+               <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #666;">PD</div>
+               <div>
+                  <div style="font-weight: 700;">Paola Daire</div>
+                  <div style="font-size: 0.8rem; color: #888;">Hace 2 semanas</div>
+               </div>
+               <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style="width: 20px; height: 20px; margin-left: auto;">
+            </div>
+            <div style="color: #fbbc04; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6;">
+              “Abanic entrega un servicio excelente, la oficina está resplandeciente, con un aroma maravilloso. Es una empresa responsable que superó nuestras expectativas.”
             </p>
-            <p style="font-weight: 700; color: var(--primary-color);">Angel Villar</p>
-            <p style="font-size: 0.9rem;">Gerente Centro de Distribución Ferretería O’higgins</p>
+          </div>
+          
+          <!-- Review 2 -->
+          <div class="card" style="border-left: 4px solid #4285F4;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+               <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #666;">AV</div>
+               <div>
+                  <div style="font-weight: 700;">Angel Villar</div>
+                  <div style="font-size: 0.8rem; color: #888;">Hace 1 mes</div>
+               </div>
+               <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style="width: 20px; height: 20px; margin-left: auto;">
+            </div>
+            <div style="color: #fbbc04; margin-bottom: 0.5rem;">★★★★★</div>
+            <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6;">
+              “Lo que más me gusta es la seriedad y supervisión. El resultado después de contratar el servicio de mantención fue satisfactorio y rápido.”
+            </p>
           </div>
         </div>
       </div>
@@ -240,28 +263,6 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section">
-      <div class="container">
-        <div class="text-center" style="margin-bottom: 3rem;">
-          <h2>Preguntas Frecuentes (F.A.Q.)</h2>
-        </div>
-        <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 1.5rem;">
-          <div class="card">
-            <h4 style="margin-bottom: 0.5rem;">¿Realizan servicios en regiones?</h4>
-            <p>Sí, tenemos cobertura en gran parte de Chile, incluyendo Antofagasta, La Serena, Viña del Mar, Concepción, Temuco y Puerto Montt, entre otras.</p>
-          </div>
-          <div class="card">
-            <h4 style="margin-bottom: 0.5rem;">¿El personal cuenta con seguro?</h4>
-            <p>Absolutamente. Todo nuestro personal está contratado bajo la normativa legal vigente y cuenta con seguros de accidentes.</p>
-          </div>
-          <div class="card">
-            <h4 style="margin-bottom: 0.5rem;">¿Qué productos utilizan?</h4>
-            <p>Utilizamos productos industriales certificados, amigables con el medio ambiente y seguros para las personas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer injected by main.js -->
     <script type="module" src="/src/main.js"></script>
