@@ -27,44 +27,22 @@
     </script>
   </head>
   <body>
-    <!-- Header -->
-    <header class="glass-panel" style="position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.5rem 0;">
-      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <div class="logo">
-          <a href="/">
-            <img src="/abanic-Logo-Abanic.webp" alt="Abanic Limpieza Profesional" style="height: 60px; width: auto;">
-          </a>
-        </div>
-        <nav>
-          <ul style="display: flex; gap: 2rem;">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto" class="btn btn-accent">Cotizar Ahora</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- Header injected by main.js -->
 
     <!-- Hero Section -->
-    <section id="inicio" class="section" style="padding-top: 10rem; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); min-height: 80vh; display: flex; align-items: center;">
-      <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+    <section id="inicio" class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      
+      <div class="container" style="position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
         <div class="hero-content animate-fade-in">
-          <h1 style="margin-bottom: 1.5rem;">Servicio Integral de Aseo y Limpieza en <span class="text-secondary">Santiago y Regiones</span></h1>
-          <p style="font-size: 1.25rem; margin-bottom: 2rem;">
-            Transformamos sus espacios en ambientes impecables y seguros. Servicio de aseo para empresas y hogares con estándares de calidad 2025.
+          <h1 style="margin-bottom: 1.5rem; font-size: 3.5rem; line-height: 1.1;">
+            Servicio Integral de <span class="text-primary">Aseo y Limpieza</span>
+          </h1>
+          <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #444;">
+            Transformamos sus espacios en ambientes impecables y seguros. Calidad certificada en Santiago y Regiones.
           </p>
           <div style="display: flex; gap: 1rem;">
-            <a href="#contacto" class="btn btn-primary">Solicitar Presupuesto</a>
-            <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
-          </div>
-          <div style="margin-top: 3rem; display: flex; gap: 2rem; align-items: center;">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span style="color: var(--secondary-color); font-size: 1.5rem;">★</span>
-              <span style="font-weight: 600;">+500 Clientes Felices</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span style="color: var(--primary-color); font-size: 1.5rem;">✓</span>
               <span style="font-weight: 600;">Personal Certificado</span>
             </div>
           </div>
@@ -75,8 +53,102 @@
       </div>
     </section>
 
+    <!-- Social Proof / Logos -->
+    <section class="section" style="background-color: var(--bg-white); padding: 2rem 0;">
+      <div class="container text-center">
+        <p style="margin-bottom: 1.5rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px;">Empresas que confían en nosotros</p>
+        <div style="display: flex; justify-content: center; gap: 4rem; opacity: 0.6; flex-wrap: wrap;">
+          <!-- Placeholders for Logos -->
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 1</div>
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 2</div>
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 3</div>
+          <div style="font-weight: 700; font-size: 1.5rem;">EMPRESA 4</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (Carousel) -->
+    <section id="servicios" class="section" style="background-color: #f9f9f9;">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
+          <div>
+            <h2 style="margin-bottom: 0.5rem;">Nuestros Servicios</h2>
+            <p style="max-width: 600px;">Soluciones integrales adaptadas a sus necesidades.</p>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn carousel-prev" aria-label="Anterior">←</button>
+            <button class="carousel-btn carousel-next" aria-label="Siguiente">→</button>
+          </div>
+        </div>
+        
+        <div id="services-carousel" class="carousel-container">
+          <div class="carousel-track">
+            <!-- Service 1: Oficinas -->
+            <div class="card">
+              <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
+                <img src="/service_office_cleaning.png" alt="Limpieza de Oficinas" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              </div>
+              <h3>Limpieza de Oficinas</h3>
+              <p>Mantención diaria o periódica para espacios de trabajo productivos.</p>
+              <a href="/limpieza-oficinas.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
+            </div>
+
+            <!-- Service 2: Hogar -->
+            <div class="card">
+              <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
+                <img src="/service_home_cleaning.png" alt="Limpieza de Hogar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              </div>
+              <h3>Limpieza de Hogares</h3>
+              <p>Servicio profundo y detallista para casas y departamentos.</p>
+              <a href="/limpieza-hogar.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
+            </div>
+
+            <!-- Service 3: Edificios -->
+            <div class="card">
+              <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
+                <img src="/service_building_cleaning.png" alt="Limpieza de Edificios" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              </div>
+              <h3>Limpieza de Edificios</h3>
+              <p>Mantención de áreas comunes, halls y espacios compartidos.</p>
+              <a href="/limpieza-edificios.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
+            </div>
+
+            <!-- Service 4: Pre Entrega -->
+            <div class="card">
+              <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
+                <img src="/service_construction_cleaning.png" alt="Limpieza Pre Entrega" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              </div>
+              <h3>Pre Entrega a Constructoras</h3>
+              <p>Limpieza fina para entrega de obras y proyectos inmobiliarios.</p>
+              <a href="/pre-entrega.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
+            </div>
+
+            <!-- Service 5: Sanitización -->
+            <div class="card">
+              <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
+                <img src="/service_office_cleaning.png" alt="Sanitización" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              </div>
+              <h3>Sanitización de Ambientes</h3>
+              <p>Eliminación de virus y bacterias con tecnología certificada.</p>
+              <a href="/sanitizacion.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
+            </div>
+
+            <!-- Service 6: Reemplazo -->
+            <div class="card">
+              <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
+                <img src="/service_staff_replacement.png" alt="Reemplazo de Personal" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+              </div>
+              <h3>Reemplazo de Personal</h3>
+              <p>Cobertura de licencias, vacaciones y ausencias de personal de aseo.</p>
+              <a href="/reemplazo-personal.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Experience Section -->
-    <section class="section" style="background-color: var(--bg-white);">
+    <section id="nosotros" class="section" style="background-color: var(--bg-white);">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
           <div>
@@ -91,78 +163,6 @@
           </div>
           <div style="background-color: #eee; height: 300px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
             Mapa de Cobertura (Placeholder)
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicios" class="section">
-      <div class="container">
-        <div class="text-center" style="margin-bottom: 4rem;">
-          <h2 style="margin-bottom: 1rem;">Nuestros Servicios</h2>
-          <p style="max-width: 600px; margin: 0 auto;">Soluciones integrales de limpieza adaptadas a sus necesidades específicas.</p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <!-- Service 1: Oficinas -->
-          <div class="card">
-            <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-              <img src="/service_office_cleaning.png" alt="Limpieza de Oficinas" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-            </div>
-            <h3>Limpieza de Oficinas</h3>
-            <p>Mantención diaria o periódica para espacios de trabajo productivos.</p>
-            <a href="/limpieza-oficinas.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-
-          <!-- Service 2: Hogar -->
-          <div class="card">
-            <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-              <img src="/service_home_cleaning.png" alt="Limpieza de Hogar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-            </div>
-            <h3>Limpieza de Hogares</h3>
-            <p>Servicio profundo y detallista para casas y departamentos.</p>
-            <a href="/limpieza-hogar.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-
-          <!-- Service 3: Edificios -->
-          <div class="card">
-            <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-              <img src="/service_building_cleaning.png" alt="Limpieza de Edificios" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-            </div>
-            <h3>Limpieza de Edificios</h3>
-            <p>Mantención de áreas comunes, halls y espacios compartidos.</p>
-            <a href="/limpieza-edificios.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-
-          <!-- Service 4: Pre Entrega -->
-          <div class="card">
-            <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-              <img src="/service_construction_cleaning.png" alt="Limpieza Pre Entrega" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-            </div>
-            <h3>Pre Entrega a Constructoras</h3>
-            <p>Limpieza fina para entrega de obras y proyectos inmobiliarios.</p>
-            <a href="/pre-entrega.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-
-          <!-- Service 5: Sanitización -->
-          <div class="card">
-            <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-              <img src="/service_office_cleaning.png" alt="Sanitización" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-            </div>
-            <h3>Sanitización de Ambientes</h3>
-            <p>Eliminación de virus y bacterias con tecnología certificada.</p>
-            <a href="/sanitizacion.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
-          </div>
-
-          <!-- Service 6: Reemplazo -->
-          <div class="card">
-            <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-              <img src="/service_staff_replacement.png" alt="Reemplazo de Personal" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
-            </div>
-            <h3>Reemplazo de Personal</h3>
-            <p>Cobertura de licencias, vacaciones y ausencias de personal de aseo.</p>
-            <a href="/reemplazo-personal.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Ver Detalles</a>
           </div>
         </div>
       </div>
@@ -263,38 +263,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer style="background-color: #1a1a1a; color: #888; padding: 4rem 0 2rem;">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-          <div>
-            <div style="margin-bottom: 1rem;">
-              <img src="/abanic-Logo-Abanic.webp" alt="Abanic" style="height: 50px; width: auto; filter: brightness(0) invert(1);">
-            </div>
-            <p>Servicios de limpieza profesional en Santiago y Regiones.</p>
-          </div>
-          <div>
-            <h4 style="color: var(--text-white); margin-bottom: 1rem;">Servicios</h4>
-            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <li><a href="/limpieza-oficinas.html">Limpieza de Oficinas</a></li>
-              <li><a href="/limpieza-hogar.html">Limpieza de Hogares</a></li>
-              <li><a href="/sanitizacion.html">Sanitización</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 style="color: var(--text-white); margin-bottom: 1rem;">Contacto</h4>
-            <ul style="display: flex; flex-direction: column; gap: 0.5rem;">
-              <li>contacto@abanic.cl</li>
-              <li><a href="tel:+56985496838" style="color: inherit;">+56 9 8549 6838</a></li>
-              <li>Santiago, Chile</li>
-            </ul>
-          </div>
-        </div>
-        <div style="border-top: 1px solid #333; padding-top: 2rem; text-align: center; font-size: 0.9rem;">
-          &copy; 2025 Abanic. Todos los derechos reservados.
-        </div>
-      </div>
-    </footer>
+    <!-- Footer injected by main.js -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,32 @@
+# Guía de Despliegue en cPanel
+
+Este proyecto ha sido construido con Vite y está listo para ser publicado en cualquier hosting con cPanel.
+
+## Pasos para Publicar:
+
+1. **Localizar la Carpeta de Producción:**
+   - La versión lista para publicar se encuentra en la carpeta `dist/` dentro de este proyecto.
+   - Esta carpeta contiene todos los archivos optimizados (HTML, CSS, JS e imágenes).
+
+2. **Comprimir los Archivos:**
+   - Entra a la carpeta `dist/`.
+   - Selecciona todos los archivos y carpetas dentro de `dist/`.
+   - Comprímelos en un archivo `.zip`.
+
+3. **Subir a cPanel:**
+   - Ingresa a tu cPanel.
+   - Ve al "Administrador de Archivos" (File Manager).
+   - Navega a la carpeta `public_html` (o la carpeta raíz de tu dominio).
+   - Haz clic en "Cargar" (Upload) y sube el archivo `.zip` que creaste.
+
+4. **Descomprimir:**
+   - Una vez subido, haz clic derecho sobre el archivo `.zip` en el Administrador de Archivos.
+   - Selecciona "Extract" (Extraer).
+   - Asegúrate de que los archivos se extraigan directamente en `public_html`.
+
+5. **¡Listo!**
+   - Tu sitio web ya debería estar visible en tu dominio.
+
+## Notas Importantes:
+- Asegúrate de que no haya un archivo `index.html` antiguo o una carpeta `default.php` que pueda interferir.
+- Si haces cambios en el código, recuerda ejecutar `npm run build` nuevamente para actualizar la carpeta `dist/`.
