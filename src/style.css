@@ -2,12 +2,15 @@
 
 :root {
   /* Colors */
-  --primary-color: #003366;
-  /* Deep Blue - Trust & Professionalism */
-  --primary-light: #004d99;
-  --secondary-color: #00A86B;
-  /* Fresh Green - Cleanliness & Eco-friendly */
-  --secondary-dark: #008f5b;
+  --primary-color: #0088CC;
+  /* Cyan Blue - Matches Abanic Logo */
+  --primary-light: #33aadd;
+  --primary-dark: #006699;
+
+  --secondary-color: #003366;
+  /* Deep Blue - Professionalism */
+  --secondary-light: #004d99;
+
   --accent-color: #FFD700;
   /* Gold - Premium Quality */
   --accent-hover: #e6c200;

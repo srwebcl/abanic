@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reemplazo de Personal de Aseo. Cubrimos licencias, vacaciones y ausencias. Personal calificado y de confianza para su empresa." />
+    <title>Reemplazo de Personal | Abanic</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Staffing",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Abanic",
+        "image": "https://www.abanic.cl/logo.png",
+        "telephone": "+56 9 8549 6838",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Santiago",
+          "addressCountry": "CL"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Santiago"
+      },
+      "url": "https://www.abanic.cl/reemplazo-personal.html"
+    }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="glass-panel" style="position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0.5rem 0;">
+      <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo">
+          <a href="/">
+            <img src="/abanic-Logo-Abanic.webp" alt="Abanic Limpieza Profesional" style="height: 60px; width: auto;">
+          </a>
+        </div>
+        <nav>
+          <ul style="display: flex; gap: 2rem;">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/#servicios">Servicios</a></li>
+            <li><a href="/#nosotros">Nosotros</a></li>
+            <li><a href="#contacto" class="btn btn-accent">Cotizar Ahora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section" style="padding-top: 10rem; background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%); min-height: 60vh; display: flex; align-items: center;">
+      <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="animate-fade-in">
+          <h1 style="margin-bottom: 1.5rem; font-size: 3rem;">Reemplazo de <span class="text-primary">Personal</span></h1>
+          <p style="font-size: 1.25rem; margin-bottom: 2rem;">
+            Asegure la continuidad operativa de su aseo. Cubrimos ausencias, vacaciones y licencias con personal calificado.
+          </p>
+          <ul style="margin-bottom: 2rem; display: grid; gap: 1rem;">
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span class="text-secondary">✓</span> Respuesta rápida ante imprevistos</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span class="text-secondary">✓</span> Personal con experiencia y antecedentes al día</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><span class="text-secondary">✓</span> Sin vínculos laborales directos para usted</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary">Solicitar Reemplazo</a>
+        </div>
+        <div class="animate-fade-in" style="animation-delay: 0.2s;">
+          <img src="/service_staff_replacement.png" alt="Reemplazo de Personal" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 4rem;">
+          <h2>Continuidad Garantizada</h2>
+          <p>No deje que la limpieza de su empresa se detenga por falta de personal.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div class="card">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Vacaciones</h3>
+            <p>Planifique los reemplazos por feriados legales de su personal de planta.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Licencias Médicas</h3>
+            <p>Cobertura inmediata ante ausencias por enfermedad o accidentes.</p>
+          </div>
+          <div class="card">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Apoyo Extra</h3>
+            <p>Refuerzo de personal para eventos especiales o temporadas altas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section" style="background-color: var(--primary-color); color: var(--text-white);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div>
+            <h2 style="color: var(--text-white); margin-bottom: 1.5rem;">Solicite Personal</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">
+              Indíquenos el perfil y horario que necesita cubrir.
+            </p>
+          </div>
+          <div class="glass-panel" style="padding: 2rem; background: rgba(255,255,255,0.1);">
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+              <input type="text" placeholder="Empresa" style="padding: 1rem; border-radius: var(--radius-md); border: none;">
+              <input type="email" placeholder="Email" style="padding: 1rem; border-radius: var(--radius-md); border: none;">
+              <input type="tel" placeholder="Teléfono" style="padding: 1rem; border-radius: var(--radius-md); border: none;">
+              <textarea placeholder="Requerimiento (días, horario, cantidad de personas)" rows="3" style="padding: 1rem; border-radius: var(--radius-md); border: none;"></textarea>
+              <button type="submit" class="btn btn-accent" style="margin-top: 1rem;">Enviar Solicitud</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #1a1a1a; color: #888; padding: 4rem 0 2rem;">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="margin-bottom: 1rem;">
+            <img src="/abanic-Logo-Abanic.webp" alt="Abanic" style="height: 50px; width: auto; filter: brightness(0) invert(1);">
+          </div>
+          <p>Soluciones de personal de aseo.</p>
+        </div>
+        <div style="border-top: 1px solid #333; padding-top: 2rem; text-align: center; font-size: 0.9rem;">
+          &copy; 2025 Abanic. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
