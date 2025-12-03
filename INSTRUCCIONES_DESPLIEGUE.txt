@@ -1,0 +1,61 @@
+# Instrucciones de Despliegue en cPanel
+
+El sitio web está listo para ser publicado. Sigue estos pasos para desplegarlo en tu hosting cPanel.
+
+## 1. Preparación de Claves (IMPORTANTE)
+
+Antes de subir los archivos, necesitas configurar las claves de Google reCAPTCHA v3 para proteger los formularios contra spam.
+
+1.  Ve a [Google reCAPTCHA Admin](https://www.google.com/recaptcha/admin).
+2.  Registra un nuevo sitio (etiqueta: Abanic, tipo: **reCAPTCHA v3**).
+3.  Agrega el dominio `abanic.cl` (y `localhost` si estás probando).
+4.  Obtendrás dos claves: **Clave de Sitio** y **Clave Secreta**.
+
+### Editar Archivos:
+
+1.  **En `src/main.js` (o en `dist/assets/index-....js` si editas el build):**
+    *   Busca el texto `TU_CLAVE_DE_SITIO_AQUI` (aparece 2 veces).
+    *   Reemplázalo con tu **Clave de Sitio**.
+
+2.  **En `public/contact.php` (o `dist/contact.php`):**
+    *   Busca `$recaptcha_secret = 'TU_CLAVE_SECRETA_DE_RECAPTCHA_AQUI';`
+    *   Reemplázalo con tu **Clave Secreta**.
+    *   Verifica que `$to_email` sea el correo correcto para recibir las notificaciones.
+
+## 2. Generar Archivos de Producción
+
+Si has editado los archivos fuente (`src/`), ejecuta el siguiente comando en tu terminal para generar la carpeta `dist`:
+
+```bash
+npm run build
+```
+
+Esto creará (o actualizará) la carpeta `dist/` con todos los archivos optimizados.
+
+## 3. Subir a cPanel
+
+1.  Ingresa a tu cPanel -> **Administrador de Archivos**.
+2.  Navega a la carpeta `public_html`.
+3.  Si hay archivos antiguos, haz un respaldo o elimínalos (ten cuidado de no borrar carpetas de correos u otros subdominios si los tienes).
+4.  Sube **todo el contenido** de la carpeta `dist/` de tu proyecto local.
+    *   `index.html`
+    *   `contact.php`
+    *   `contacto.html`
+    *   `limpieza-oficinas.html`, etc.
+    *   Carpeta `assets/`
+    *   Imágenes (`.jpeg`, `.webp`, etc.)
+5.  Asegúrate de que `contact.php` esté en la raíz de `public_html` (junto a `index.html`).
+
+## 4. Verificación
+
+1.  Ingresa a `www.abanic.cl`.
+2.  Verifica que el sitio cargue correctamente.
+3.  Prueba el formulario de contacto. Deberías recibir un correo en la dirección configurada en `contact.php`.
+    *   Si no recibes el correo, revisa la carpeta de Spam.
+    *   Si da error, verifica los logs de errores en cPanel (`error_log`).
+
+## Solución de Problemas Comunes
+
+*   **Error 405 Method Not Allowed:** Asegúrate de que el formulario esté enviando una petición POST a `/contact.php`.
+*   **Error de reCAPTCHA:** Verifica que hayas puesto las claves correctas y que el dominio `abanic.cl` esté autorizado en la consola de Google reCAPTCHA.
+*   **Correos no llegan:** Algunos hostings bloquean la función `mail()` de PHP o requieren autenticación SMTP. Si es así, contacta a tu proveedor de hosting o configura SMTP en el script PHP.

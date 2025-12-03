@@ -154,6 +154,76 @@ p {
   flex: 0 0 300px;
   /* Fixed width for cards */
   scroll-snap-align: start;
+  height: auto;
+  /* Allow flex stretch */
+  display: flex;
+  /* Make card a flex container */
+  flex-direction: column;
+}
+
+/* Testimonials specific override for single slide */
+#testimonials-carousel .carousel-track>* {
+  flex: 0 0 100%;
+  /* Full width for single slide */
+  max-width: 800px;
+  /* Optional max width for readability */
+  margin: 0 auto;
+  /* Center if max-width is applied */
+}
+
+/* Carousel Card Alignment */
+.carousel-track .card {
+  /* Inherit flex properties from > * selector or redefine */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Take full height of the stretched item */
+  justify-content: space-between;
+}
+
+.carousel-track .card h3 {
+  height: 4.5rem;
+  /* Fixed height for exactly 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  /* Ensure consistent line height */
+  flex-shrink: 0;
+  /* Prevent shrinking */
+}
+
+.carousel-track .card p {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  /* Prevent spillover */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* Limit text lines if needed, or remove to show all */
+  -webkit-box-orient: vertical;
+}
+
+.carousel-track .card .btn {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
+  /* Ensure it sticks to bottom */
+  flex-shrink: 0;
+}
+
+/* Badge Style for Experience Section */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #f0f4f8;
+  color: var(--text-light);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .carousel-controls {
@@ -299,6 +369,48 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* WhatsApp Button Animations */
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.whatsapp-bubble {
+  animation: float-bubble 3s ease-in-out infinite;
+}
+
+@keyframes float-bubble {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 /* Hero Section with Motion Background */
 .hero-section {
   position: relative;
@@ -365,6 +477,74 @@ footer a:hover {
     transform: scale(1.1);
   }
 }
+
+/* Hero Slideshow */
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideShow 15s infinite;
+}
+
+/* Stagger animations for 3 slides */
+.hero-slide:nth-child(1) {
+  animation-delay: 0s;
+  background-color: #ddd;
+  /* Placeholder color */
+}
+
+.hero-slide:nth-child(2) {
+  animation-delay: 5s;
+  background-color: #ccc;
+  /* Placeholder color */
+}
+
+.hero-slide:nth-child(3) {
+  animation-delay: 10s;
+  background-color: #bbb;
+  /* Placeholder color */
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  6% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+    transform: scale(1.05);
+    /* Subtle zoom */
+  }
+
+  39% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /* Form Styles */
 .form-group input:focus,
@@ -466,4 +646,13 @@ footer a:hover {
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Hide reCAPTCHA Badge - Google Policy Compliant (since legal text is added) */
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  display: none !important;
+  /* Force removal from layout */
 }

@@ -1,0 +1,25 @@
+# Cómo ocultar la insignia de reCAPTCHA directamente en cPanel
+
+Si prefieres editar el archivo directamente en el servidor en lugar de subir todo de nuevo, sigue estos pasos:
+
+1.  **Ingresa a cPanel** -> **Administrador de Archivos**.
+2.  Entra a la carpeta **`public_html`**.
+3.  Entra a la carpeta **`assets`**.
+4.  Busca un archivo que termine en **`.css`**.
+    *   Probablemente se llame algo como `main-CBmanxer.css` o similar (el código raro cambia en cada versión).
+5.  Haz clic derecho sobre ese archivo y selecciona **"Edit"** (Editar).
+6.  Ve al **final del archivo** (hasta la última línea).
+7.  Pega el siguiente código:
+
+```css
+/* Ocultar insignia de reCAPTCHA */
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+```
+
+8.  Haz clic en **"Guardar cambios"** (Save Changes).
+9.  ¡Listo! Recarga tu sitio web (quizás necesites borrar caché con Ctrl+F5) y la insignia habrá desaparecido.

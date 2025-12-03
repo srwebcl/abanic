@@ -31,7 +31,12 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-section">
-      <div class="hero-bg"></div>
+      <!-- Slideshow Background -->
+      <div class="hero-slideshow">
+        <div class="hero-slide" style="background-image: url('/servicio_aseo_2.jpeg');"></div>
+        <div class="hero-slide" style="background-image: url('/servicio_aseo_4.jpeg');"></div>
+        <div class="hero-slide" style="background-image: url('/servicio_aseo_6.jpeg');"></div>
+      </div>
       <div class="hero-overlay"></div>
       
       <div class="container" style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center;">
@@ -88,7 +93,7 @@
             <!-- Service 1: Oficinas -->
             <div class="card">
               <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-                <img src="/service_office_cleaning.png" alt="Limpieza de Oficinas" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                <img src="/public/servicios-6.jpeg" alt="Limpieza de Oficinas" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
               </div>
               <h3>Limpieza de Oficinas</h3>
               <p>Mantención diaria o periódica para espacios de trabajo productivos.</p>
@@ -98,7 +103,7 @@
             <!-- Service 2: Hogar -->
             <div class="card">
               <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-                <img src="/service_home_cleaning.png" alt="Limpieza de Hogar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                <img src="/public/servicios-5.jpeg" alt="Limpieza de Hogar" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
               </div>
               <h3>Limpieza de Hogares</h3>
               <p>Servicio profundo y detallista para casas y departamentos.</p>
@@ -108,7 +113,7 @@
             <!-- Service 3: Edificios -->
             <div class="card">
               <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-                <img src="/service_building_cleaning.png" alt="Limpieza de Edificios" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                <img src="/public/servicios-4.jpeg" alt="Limpieza de Edificios" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
               </div>
               <h3>Limpieza de Edificios</h3>
               <p>Mantención de áreas comunes, halls y espacios compartidos.</p>
@@ -118,7 +123,7 @@
             <!-- Service 4: Pre Entrega -->
             <div class="card">
               <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-                <img src="/service_construction_cleaning.png" alt="Limpieza Pre Entrega" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                <img src="/public/servicios-3.jpeg" alt="Limpieza Pre Entrega" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
               </div>
               <h3>Pre Entrega a Constructoras</h3>
               <p>Limpieza fina para entrega de obras y proyectos inmobiliarios.</p>
@@ -128,7 +133,7 @@
             <!-- Service 5: Sanitización -->
             <div class="card">
               <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-                <img src="/service_office_cleaning.png" alt="Sanitización" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                <img src="/public/servicios-2.jpeg" alt="Sanitización" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
               </div>
               <h3>Sanitización de Ambientes</h3>
               <p>Eliminación de virus y bacterias con tecnología certificada.</p>
@@ -138,7 +143,7 @@
             <!-- Service 6: Reemplazo -->
             <div class="card">
               <div style="height: 200px; margin-bottom: 1.5rem; overflow: hidden; border-radius: var(--radius-md);">
-                <img src="/service_staff_replacement.png" alt="Reemplazo de Personal" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                <img src="/public/servicios-1.jpeg" alt="Reemplazo de Personal" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
               </div>
               <h3>Reemplazo de Personal</h3>
               <p>Cobertura de licencias, vacaciones y ausencias de personal de aseo.</p>
@@ -153,71 +158,125 @@
     <section id="nosotros" class="section" style="background-color: var(--bg-white);">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <!-- Text Content -->
           <div>
-            <h2 style="margin-bottom: 1.5rem;">Más de 3 décadas de Experiencia</h2>
-            <p style="margin-bottom: 1.5rem;">
-              Abanic es una empresa y marca chilena, que cuenta con <strong>33 años de trayectoria</strong>, dedicada a la prestación de servicios integrales y exclusivos de limpieza de oficinas, edificios corporativos y residenciales, locales comerciales, establecimientos educacionales, plantas productivas y bodegas.
+            <div style="display: inline-block; background: rgba(0, 136, 204, 0.1); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem;">
+              ★ Líderes en Limpieza
+            </div>
+            <h2 style="margin-bottom: 1.5rem; font-size: 2.5rem; line-height: 1.2;">
+              Más de <span class="text-gradient">33 Años</span> de Trayectoria
+            </h2>
+            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #555;">
+              Abanic es una empresa chilena dedicada a servicios integrales de limpieza. Nuestra experiencia nos permite entregar soluciones exclusivas para <strong>oficinas, edificios, industrias y hogares</strong>.
             </p>
-            <p style="font-weight: 600; color: var(--primary-color);">Cobertura en:</p>
-            <p style="font-size: 0.9rem; color: var(--text-light);">
-              Antofagasta, Calama, Iquique, Copiapó, La Serena, Coquimbo, Viña del Mar, Valparaíso, Concon, Santiago, Rancagua, Talca, Concepción, Talcahuano, Temuco y Puerto Montt. Además de Lima en Perú.
-            </p>
+            
+            <div style="margin-bottom: 2rem;">
+              <h4 style="margin-bottom: 1rem; color: var(--secondary-color);">Cobertura Nacional e Internacional:</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="badge">Santiago</span>
+                <span class="badge">Viña del Mar</span>
+                <span class="badge">Valparaíso</span>
+                <span class="badge">Concon</span>
+                <span class="badge">Antofagasta</span>
+                <span class="badge">Calama</span>
+                <span class="badge">Iquique</span>
+                <span class="badge">Copiapó</span>
+                <span class="badge">La Serena</span>
+                <span class="badge">Coquimbo</span>
+                <span class="badge">Rancagua</span>
+                <span class="badge">Talca</span>
+                <span class="badge">Concepción</span>
+                <span class="badge">Temuco</span>
+                <span class="badge">Puerto Montt</span>
+                <span class="badge" style="background: var(--accent-color); color: var(--secondary-color);">Lima, Perú</span>
+              </div>
+            </div>
+            
+            <a href="/contacto.html" class="btn btn-primary">Contáctanos Hoy</a>
           </div>
-          <div style="background-color: #eee; height: 300px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
-            Mapa de Cobertura (Placeholder)
+          
+          <!-- Image -->
+          <div style="position: relative;">
+            <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: var(--accent-color); border-radius: 50%; opacity: 0.2; z-index: 0;"></div>
+            <img src="/servicio_aseo_1.jpeg" alt="Experiencia Abanic" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); position: relative; z-index: 1;">
+            <div style="position: absolute; bottom: -20px; left: -20px; background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-md); z-index: 2; display: flex; align-items: center; gap: 1rem;">
+              <span style="font-size: 2rem; color: var(--primary-color);">33+</span>
+              <span style="font-weight: 700; line-height: 1.2; font-size: 0.9rem;">Años de<br>Excelencia</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Section (Google Reviews Style) -->
+    <!-- Testimonials Section (Slider) -->
     <section class="section" style="background-color: #f9f9f9;">
       <div class="container">
-        <div class="text-center" style="margin-bottom: 3rem;">
-          <h2 style="margin-bottom: 0.5rem;">Lo que dicen nuestros clientes</h2>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: #fbbc04;">
-             <span style="font-size: 1.2rem;">★★★★★</span>
-             <span style="color: #666; font-size: 0.9rem;">4.9/5 en Google Reviews</span>
+        <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
+          <div class="text-center" style="text-align: left;">
+            <h2 style="margin-bottom: 0.5rem;">Lo que dicen nuestros clientes</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; color: #fbbc04;">
+               <span style="font-size: 1.2rem;">★★★★★</span>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn testimonial-prev" aria-label="Anterior">←</button>
+            <button class="carousel-btn testimonial-next" aria-label="Siguiente">→</button>
           </div>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          <!-- Review 1 -->
-          <div class="card" style="border-left: 4px solid #4285F4;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-               <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #666;">PD</div>
-               <div>
-                  <div style="font-weight: 700;">Paola Daire</div>
-                  <div style="font-size: 0.8rem; color: #888;">Hace 2 semanas</div>
-               </div>
-               <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style="width: 20px; height: 20px; margin-left: auto;">
+
+        <div id="testimonials-carousel" class="carousel-container">
+          <div class="carousel-track">
+            <!-- Review 1 -->
+            <div class="card" style="border-left: 4px solid #4285F4;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                 <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #666;">PD</div>
+                 <div>
+                    <div style="font-weight: 700;">Paola Daire</div>
+                    <div style="font-size: 0.8rem; color: #888;">Gerente de Operaciones</div>
+                 </div>
+              </div>
+              <div style="color: #fbbc04; margin-bottom: 0.5rem;">★★★★★</div>
+              <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6;">
+                “Abanic entrega un servicio excelente, la oficina está resplandeciente, con un aroma maravilloso. Es una empresa responsable que superó nuestras expectativas.”
+              </p>
             </div>
-            <div style="color: #fbbc04; margin-bottom: 0.5rem;">★★★★★</div>
-            <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6;">
-              “Abanic entrega un servicio excelente, la oficina está resplandeciente, con un aroma maravilloso. Es una empresa responsable que superó nuestras expectativas.”
-            </p>
-          </div>
-          
-          <!-- Review 2 -->
-          <div class="card" style="border-left: 4px solid #4285F4;">
-            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-               <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #666;">AV</div>
-               <div>
-                  <div style="font-weight: 700;">Angel Villar</div>
-                  <div style="font-size: 0.8rem; color: #888;">Hace 1 mes</div>
-               </div>
-               <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" style="width: 20px; height: 20px; margin-left: auto;">
+            
+            <!-- Review 2 -->
+            <div class="card" style="border-left: 4px solid #4285F4;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                 <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #666;">AV</div>
+                 <div>
+                    <div style="font-weight: 700;">Angel Villar</div>
+                    <div style="font-size: 0.8rem; color: #888;">Administrador Edificio</div>
+                 </div>
+              </div>
+              <div style="color: #fbbc04; margin-bottom: 0.5rem;">★★★★★</div>
+              <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6;">
+                “Lo que más me gusta es la seriedad y supervisión. El resultado después de contratar el servicio de mantención fue satisfactorio y rápido.”
+              </p>
             </div>
-            <div style="color: #fbbc04; margin-bottom: 0.5rem;">★★★★★</div>
-            <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6;">
-              “Lo que más me gusta es la seriedad y supervisión. El resultado después de contratar el servicio de mantención fue satisfactorio y rápido.”
-            </p>
+
+            <!-- Review 3 (Added for slider effect) -->
+            <div class="card" style="border-left: 4px solid #4285F4;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                 <div style="width: 40px; height: 40px; background-color: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #666;">JR</div>
+                 <div>
+                    <div style="font-weight: 700;">Juan Rojas</div>
+                    <div style="font-size: 0.8rem; color: #888;">Jefe de Planta</div>
+                 </div>
+              </div>
+              <div style="color: #fbbc04; margin-bottom: 0.5rem;">★★★★★</div>
+              <p style="font-style: italic; font-size: 0.95rem; line-height: 1.6;">
+                “Excelente servicio de limpieza para nuestro edificio. El personal es muy profesional y siempre están atentos a los detalles.”
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why Us Section -->
-    <section id="nosotros" class="section" style="background-color: var(--primary-color); color: var(--text-white);">
+    <section id="por-que-elegirnos" class="section" style="background-color: var(--primary-color); color: var(--text-white);">
       <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
           <div>
@@ -256,7 +315,13 @@
                 <option value="hogar">Limpieza de Hogar</option>
                 <option value="sanitizacion">Sanitización</option>
               </select>
-              <button type="submit" class="btn btn-accent" style="margin-top: 1rem; width: 100%;">Enviar Solicitud</button>
+              <textarea placeholder="Mensaje (Opcional)" rows="2" style="padding: 1rem; border-radius: var(--radius-md); border: none; resize: vertical; font-family: inherit;"></textarea>
+              <button type="submit" class="btn btn-accent" style="margin-top: 0.5rem; width: 100%;">Enviar Solicitud</button>
+              <p style="font-size: 0.7rem; color: rgba(255,255,255,0.6); text-align: center; margin-top: 0.5rem; line-height: 1.2;">
+                Este sitio está protegido por reCAPTCHA y se aplican la 
+                <a href="https://policies.google.com/privacy" target="_blank" style="color: rgba(255,255,255,0.6); text-decoration: underline;">Política de Privacidad</a> y los 
+                <a href="https://policies.google.com/terms" target="_blank" style="color: rgba(255,255,255,0.6); text-decoration: underline;">Términos de Servicio</a> de Google.
+              </p>
             </form>
           </div>
         </div>

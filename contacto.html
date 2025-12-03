@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contáctenos para servicios de limpieza profesional en Santiago. Abanic: Aseo de oficinas, edificios y hogares. Cotice aquí." />
+    <title>Contacto | Abanic Limpieza Profesional</title>
+  </head>
+  <body>
+    <!-- Header injected by main.js -->
+
+    <!-- Hero Section -->
+    <section class="section" style="padding-top: 10rem; background: var(--secondary-color); color: white; text-align: center;">
+      <div class="container">
+        <h1 class="animate-slide-up" style="font-size: 3rem; margin-bottom: 1rem; color: white;">Contáctenos</h1>
+        <p class="animate-fade-in" style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; color: rgba(255, 255, 255, 0.9);">
+          Estamos listos para atender sus requerimientos de limpieza y aseo integral.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section class="section" style="background-color: var(--bg-white);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+          
+          <!-- Contact Info -->
+          <div>
+            <h2 style="margin-bottom: 2rem; color: var(--secondary-color);">Información de Contacto</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+              <div style="display: flex; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: rgba(0, 136, 204, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 1.5rem;">
+                  📍
+                </div>
+                <div>
+                  <h4 style="margin-bottom: 0.5rem;">Ubicación</h4>
+                  <p style="color: #666;">Santiago, Chile (Cobertura en Regiones)</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: rgba(0, 136, 204, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 1.5rem;">
+                  📞
+                </div>
+                <div>
+                  <h4 style="margin-bottom: 0.5rem;">Teléfono</h4>
+                  <p><a href="tel:+56985496838" style="color: #666; text-decoration: none;">+56 9 8549 6838</a></p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: rgba(0, 136, 204, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color); font-size: 1.5rem;">
+                  ✉
+                </div>
+                <div>
+                  <h4 style="margin-bottom: 0.5rem;">Email</h4>
+                  <p><a href="mailto:contacto@abanic.cl" style="color: #666; text-decoration: none;">contacto@abanic.cl</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Container -->
+          <div id="contact-page-form">
+            <!-- Form injected by Form.js -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer injected by main.js -->
+    <script type="module" src="/src/main.js"></script>
+    <script type="module">
+      import { renderForm } from '/src/components/Form.js';
+      // Render form in the specific container for this page
+      renderForm('contact-page-form');
+    </script>
+  </body>
+</html>

@@ -24,7 +24,8 @@ export function renderHeader() {
               </ul>
             </li>
             <li><a href="/#nosotros" class="nav-link">Nosotros</a></li>
-            <li><a href="#contacto" class="btn btn-green">Cotizar Ahora</a></li>
+            <li><a href="/contacto.html" class="nav-link">Contacto</a></li>
+            <li><a href="/contacto.html" class="btn btn-green">Cotizar Ahora</a></li>
           </ul>
         </nav>
 
@@ -52,7 +53,8 @@ export function renderHeader() {
             </ul>
           </li>
           <li><a href="/#nosotros" class="nav-link">Nosotros</a></li>
-          <li><a href="#contacto" class="btn btn-green" style="width: 100%; text-align: center;">Cotizar Ahora</a></li>
+          <li><a href="/contacto.html" class="nav-link">Contacto</a></li>
+          <li><a href="/contacto.html" class="btn btn-green" style="width: 100%; text-align: center;">Cotizar Ahora</a></li>
         </ul>
       </div>
     </header>
